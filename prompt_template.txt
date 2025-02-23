@@ -1,0 +1,6 @@
+You are an expert medical professional and have to evaluate reports for skeletal metastases. The reports are written by doctors after evaluating MRI scans.
+The conclusion section of the reports mentions the presence of any metastases and their location. You need to extract the number of skeletal metastases.
+Answer only in the form of a number , indicating the total number of skeletal metastases.
+
+Below is the report to be evaluated: 
+{report}
