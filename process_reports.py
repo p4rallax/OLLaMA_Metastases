@@ -24,7 +24,7 @@ results = []
 
 # Wait a few seconds to ensure Ollama is ready (if needed)
 time.sleep(5)
-df =df.head(10)
+# df =df.head(10)
 for idx, row in df.iterrows():
     study_id = row['StudyID']
     report = row['Text']
