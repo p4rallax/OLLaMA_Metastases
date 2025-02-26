@@ -7,4 +7,4 @@ To run:
 5. Build the docker image using (ollama-pipeline-full can be replaced with a name of your choice) :
      ``` docker build -t ollama-pipeline-full . ```
 6. Run the docker container using (replace model_name with desired ollama model (eg llama2), and also change path to output folder.):
-   ``` docker run --gpus all --rm -v path/to/output/folder:/app  ollama-pipeline-full model_name ```
+   ``` docker run --gpus all --rm -v path/to/output/folder:/app   -v /path/to/models/folder:/models ollama-pipeline-full model_name ```
