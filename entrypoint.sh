@@ -1,6 +1,6 @@
 #!/bin/bash
-MODEL=${1:-mistral}
-export OLLAMA_HOST=127.0.0.1
+MODEL=${1:-llama3.1}
+# export OLLAMA_HOST=127.0.0.1
 echo "Starting Ollama using model: $MODEL"
 
 # Start Ollama in the background

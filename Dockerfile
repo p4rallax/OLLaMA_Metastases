@@ -16,11 +16,19 @@ RUN pip install pandas openpyxl requests
 # Create app directory
 WORKDIR /app
 
+# Set a custom folder for Ollama models
+ENV OLLAMA_MODELS=/models
+ENV PATH="/root/.ollama/bin:$PATH"
+
 # Copy processing script, input files, prompt template, and entrypoint script into container
 COPY process_reports.py .
 COPY PSMA_reports.xlsx .
 COPY prompt_template.txt .
 COPY entrypoint.sh .
+
+# RUN ollama serve
+
+# RUN ollama pull llama3.1 && ollama pull deepseek-r1:7b && ollama pull gemma2
 
 # Expose Ollama API port (if needed)
 EXPOSE 11434
